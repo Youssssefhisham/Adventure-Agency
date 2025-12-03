@@ -1,0 +1,324 @@
+/* General Resets */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster/Lobster-Regular.ttf);
+}
+
+/* ------------------Header----------------- */
+header {
+  height: 100vh;
+  background: url(../images/b1.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Tweaks */
+.navbar-brand.titel {
+  font-size: xx-large;
+  color: white !important;
+  font-family: lobster;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Hero Content */
+.hero-box {
+  width: 400px;
+  height: 200px;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 500px) {
+  .hero-box {
+    width: 300px;
+    transform: scale(0.8);
+  }
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  border: 5px solid gold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rectangle_content {
+  width: 100%;
+  height: 75%;
+  background: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 12.5%;
+  /* Centered vertically */
+  left: 10%;
+  /* Offset effect */
+  z-index: 2;
+  padding: 20px;
+}
+
+.p1 {
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.p2 {
+  font-size: 35px;
+  color: rgb(0, 207, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* ------------------Section 1 (Cards)----------------- */
+.section1 {
+
+  perspective: 1000px;
+}
+
+.card1,
+.card2,
+.card4 {
+  position: relative;
+  height: 350px;
+  width: 250px;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.front1,
+.front2,
+.front4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: -1px -1px 10px 1px black;
+  backface-visibility: hidden;
+}
+
+.front1 {
+  background: yellow url(../images/ab1.jpg) no-repeat center/cover;
+}
+
+.front2 {
+  background: yellow url(../images/ab2.jpg) no-repeat center/cover;
+}
+
+.front4 {
+  background: yellow url(../images/ab3.jpg) no-repeat center/cover;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  background: white;
+  padding: 10px;
+}
+
+.card1:hover,
+.card2:hover,
+.card4:hover {
+  transform: rotateY(180deg);
+}
+
+.pp1 {
+  color: black;
+  font-size: x-large;
+}
+
+.pp2 {
+  color: orange;
+  font-size: xx-large;
+  line-height: 1.2;
+}
+
+.pp3 {
+  color: rgb(146, 146, 146);
+  font-size: small;
+}
+
+
+/* ---------------------Section 2 (Icons)------------------- */
+.section2 {
+  min-height: 500px;
+  background: rgb(0, 0, 0) url(../images/b3.jpg) center/cover no-repeat;
+  background-blend-mode: screen;
+  background-attachment: fixed;
+}
+
+.section2 .text .ppp1 {
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section2 .text .ppp2 {
+  color: orange;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.circle-item {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.circle-item img {
+  width: 60px;
+  height: auto;
+}
+
+.icon_text {
+  color: rgb(255, 183, 0);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+}
+
+/* ---------------------Section 3 (Services)------------------ */
+.section3 .pppp1 {
+  color: black;
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.section3 .pppp2 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: goldenrod;
+}
+
+.section3 .i1 {
+  box-shadow: 0px 0px 10px 0px gray;
+  background: white;
+}
+
+.section3 .i1 img {
+  width: 80px;
+}
+
+/* ---------------------Section 4 (Split)------------------ */
+.section4 .rect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgb(0, 204, 0);
+  top: 20px;
+  left: -20px;
+  /* Overlap effect */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------------------Section 5 (Gallery)------------------ */
+.section5 .img-box {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.section5 .img1 {
+  background-image: url(../images/ab3.jpg);
+}
+
+.section5 .img2 {
+  background-image: url(../images/g5.jpg);
+}
+
+.section5 .img3 {
+  background-image: url(../images/g6.jpg);
+}
+
+.section5 .img4 {
+  background-image: url(../images/ab4.jpg);
+}
+
+.section5 .img5 {
+  background-image: url(../images/g2.jpg);
+}
+
+.section5 .img6 {
+  background-image: url(../images/g3.jpg);
+}
+
+/* ---------------------Section 6 (Blog)------------------ */
+.section6 .bg-image {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.section6 .img2 {
+  background-image: url(../images/b4.jpg);
+}
+
+.section6 .img3 {
+  background-image: url(../images/g6.jpg);
+}
+
+.section6 h3 {
+  color: rgb(173, 173, 173);
+  font-weight: bold;
+}
+
+.section6 h1 {
+  color: rgb(76, 182, 76);
+  font-weight: bold;
+}
+
+/* ---------------------Section 7 (Booking)------------------ */
+.section7 .ig {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------------------Section 8 (Subscribe)------------------ */
+.section8 {
+  height: 400px;
+  background: url(../images/b4.jpg) center/cover no-repeat;
+}
+
+/* ---------------------Section 10 (Footer)------------------ */
+.section10 {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+  color: white;
+}
+
+.section10 span {
+  color: grey;
+}
